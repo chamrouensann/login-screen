@@ -13,10 +13,11 @@ class MyApp extends StatelessWidget {
         primaryColor: kPrimaryColor,
         scaffoldBackgroundColor: kBackgroundColor,
         textTheme: TextTheme(
-            display1: TextStyle(color: Colors.white),
-            button: TextStyle(
-              color: kPrimaryColor,
-            )),
+            display1:
+                TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
+            button: TextStyle(color: kPrimaryColor),
+            headline:
+                TextStyle(color: Colors.white, fontWeight: FontWeight.normal)),
       ),
       home: WelcomeScreen(),
     );
@@ -44,15 +45,44 @@ class WelcomeScreen extends StatelessWidget {
             child: Column(
               children: <Widget>[
                 RichText(
+                  textAlign: TextAlign.center,
                   text: TextSpan(children: [
+                    //Breaking News
                     TextSpan(
-                      text: "Breaking News",
-                      style: Theme.of(context)
-                          .textTheme
-                          .display1
-                          .copyWith(fontWeight: FontWeight.bold),
+                      text: "Breaking News\n",
+                      style: Theme.of(context).textTheme.display1,
                     ),
+                    //Master of Art Banking
+                    TextSpan(
+                      text: "MASTER OF ART BANKING",
+                      style: Theme.of(context).textTheme.headline,
+                    )
                   ]),
+                ),
+                Container(
+                  padding: EdgeInsets.symmetric(
+                    horizontal: 26,
+                    vertical: 16,
+                  ),
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(25),
+                    color: kPrimaryColor,
+                  ),
+                  child: Row(
+                    children: <Widget>[
+                      Text(
+                        "START ENROLLING",
+                        style: Theme.of(context).textTheme.button.copyWith(
+                              color: Colors.black,
+                            ),
+                      ),
+                      SizedBox(width: 20),
+                      Icon(
+                        Icons.arrow_forward,
+                        color: Colors.black,
+                      )
+                    ],
+                  ),
                 ),
               ],
             ),

@@ -43,6 +43,7 @@ class WelcomeScreen extends StatelessWidget {
           ),
           Expanded(
             child: Column(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: <Widget>[
                 RichText(
                   textAlign: TextAlign.center,
@@ -59,29 +60,32 @@ class WelcomeScreen extends StatelessWidget {
                     )
                   ]),
                 ),
-                Container(
-                  padding: EdgeInsets.symmetric(
-                    horizontal: 26,
-                    vertical: 16,
-                  ),
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(25),
-                    color: kPrimaryColor,
-                  ),
-                  child: Row(
-                    children: <Widget>[
-                      Text(
-                        "START ENROLLING",
-                        style: Theme.of(context).textTheme.button.copyWith(
-                              color: Colors.black,
-                            ),
-                      ),
-                      SizedBox(width: 20),
-                      Icon(
-                        Icons.arrow_forward,
-                        color: Colors.black,
-                      )
-                    ],
+                FittedBox(
+                  child: Container(
+                    margin: EdgeInsets.only(bottom: 25),
+                    padding: EdgeInsets.symmetric(
+                      horizontal: 26,
+                      vertical: 16,
+                    ),
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(25),
+                      color: kPrimaryColor,
+                    ),
+                    child: Row(
+                      children: <Widget>[
+                        Text(
+                          "START ENROLLING",
+                          style: Theme.of(context).textTheme.button.copyWith(
+                                color: Colors.black,
+                              ),
+                        ),
+                        SizedBox(width: 20),
+                        Icon(
+                          Icons.arrow_forward,
+                          color: Colors.black,
+                        )
+                      ],
+                    ),
                   ),
                 ),
               ],

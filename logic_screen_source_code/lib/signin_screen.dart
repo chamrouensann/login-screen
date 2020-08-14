@@ -38,16 +38,89 @@ class SignInScreen extends StatelessWidget {
                       )
                     ],
                   ),
+                  Spacer(),
+                  Padding(
+                    padding: const EdgeInsets.only(bottom: 30),
+                    child: Row(
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: <Widget>[
+                        Padding(
+                          padding: EdgeInsets.only(right: 16.0),
+                          child: Icon(
+                            Icons.alternate_email,
+                            color: kPrimaryColor,
+                          ),
+                        ),
+                        Expanded(
+                          child: TextField(
+                            decoration:
+                                InputDecoration(hintText: "Email Address"),
+                          ),
+                        )
+                      ],
+                    ),
+                  ),
                   Row(
+                    crossAxisAlignment: CrossAxisAlignment.center,
                     children: <Widget>[
-                      Icon(
-                        Icons.alternate_email,
-                        color: kPrimaryColor,
+                      Padding(
+                        padding: EdgeInsets.only(right: 16.0),
+                        child: Icon(
+                          Icons.lock,
+                          color: kPrimaryColor,
+                        ),
                       ),
                       Expanded(
-                        child: TextField(),
+                        child: TextField(
+                          decoration: InputDecoration(hintText: "Password"),
+                        ),
                       )
                     ],
+                  ),
+                  Spacer(),
+                  Padding(
+                    padding: const EdgeInsets.only(bottom: 50.0),
+                    child: Row(
+                      children: <Widget>[
+                        Container(
+                          padding: EdgeInsets.all(16),
+                          decoration: BoxDecoration(
+                            shape: BoxShape.circle,
+                            border:
+                                Border.all(color: Colors.white.withOpacity(.5)),
+                          ),
+                          child: Icon(
+                            Icons.android,
+                            color: Colors.white.withOpacity(.5),
+                          ),
+                        ),
+                        SizedBox(width: 16),
+                        Container(
+                          padding: EdgeInsets.all(16),
+                          decoration: BoxDecoration(
+                            shape: BoxShape.circle,
+                            border:
+                                Border.all(color: Colors.white.withOpacity(.5)),
+                          ),
+                          child: Icon(
+                            Icons.chat,
+                            color: Colors.white.withOpacity(.5),
+                          ),
+                        ),
+                        Spacer(),
+                        Container(
+                          padding: EdgeInsets.all(16),
+                          decoration: BoxDecoration(
+                            shape: BoxShape.circle,
+                            color: kPrimaryColor,
+                          ),
+                          child: Icon(
+                            Icons.arrow_forward,
+                            color: Colors.black,
+                          ),
+                        )
+                      ],
+                    ),
                   )
                 ],
               ),
